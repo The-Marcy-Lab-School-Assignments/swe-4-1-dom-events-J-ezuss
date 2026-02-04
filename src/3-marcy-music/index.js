@@ -32,3 +32,5 @@ const playlists = [
 ];
 
 // Add your code here...
+
+const playlist = document.querySelector;

@@ -42,7 +42,7 @@ But an error is thrown.
 Consider this HTML:
 
 ```html
-<div id='button-container'>
+<div id="button-container">
   <button>Click Me</button>
 </div>
 ```
@@ -69,8 +69,8 @@ Look at the JavaScript code below that is attempting to create a product card dy
 const product = {
   name: 'iPhone 17',
   price: 1099.99,
-  img: './images/iphone17.png'
-}
+  img: './images/iphone17.png',
+};
 
 /* Desired structure: 
 <div>
@@ -96,7 +96,6 @@ However, when the page loads and the code is executed, the user isn't able to se
 
 **Your Answer:**
 
-
 ## Question 4: Event Delegation and event.target.closest()
 
 Consider this HTML:
@@ -104,16 +103,16 @@ Consider this HTML:
 ```html
 <ul id="todo-list">
   <li id="todo-1">
-    <p class='description'>Walk the dog</p>
-    <p class='is-complete'>✅</p>
+    <p class="description">Walk the dog</p>
+    <p class="is-complete">✅</p>
   </li>
   <li id="todo-2">
-    <p class='description'>Take out the trash</p>
-    <p class='is-complete'>❌</p>
+    <p class="description">Take out the trash</p>
+    <p class="is-complete">❌</p>
   </li>
   <li id="todo-3">
-    <p class='description'>Wash the dishes</p>
-    <p class='is-complete'>❌</p>
+    <p class="description">Wash the dishes</p>
+    <p class="is-complete">❌</p>
   </li>
 </ul>
 ```
@@ -127,7 +126,7 @@ todoList.addEventListener('click', (event) => {
 
   if (!clickedLi) return;
 
-  clickedLi.querySelector('.is-complete').textContent = "✅";
+  clickedLi.querySelector('.is-complete').textContent = '✅';
 });
 ```
 
@@ -144,3 +143,5 @@ Do some independent learning and reading about the `querySelectorAll()` method. 
 2. What is the difference between a `NodeList` and an array? Why is it important to know this difference?
 
 **Your Answer:**
+
+1.
