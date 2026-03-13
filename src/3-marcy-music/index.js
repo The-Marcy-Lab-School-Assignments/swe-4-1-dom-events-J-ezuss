@@ -32,3 +32,29 @@ const playlists = [
 ];
 
 // Add your code here...
+
+const playlistsGrid = document.querySelector('#playlists-grid');
+
+playlistsGrid.innerHTML = playlists
+  .map(
+    (playlist) => `
+  <li class="playlist-card" data-title="${playlist.title}">
+    <img src="${playlist.image}" alt="${playlist.title} playlist cover" />
+    <p>${playlist.title}</p>
+  </li>
+`,
+  )
+  .join('');
+
+playlistsGrid.addEventListener('click', (event) => {
+  const card = event.target.closest('.playlist-card');
+  if (!card) return;
+
+  const previouslySelected = playlistsGrid.querySelector(
+    '.playlist-card.selected',
+  );
+  if (previouslySelected) previouslySelected.classList.remove('selected');
+
+  card.classList.add('selected');
+  document.querySelector('#now-playing-title').textContent = card.dataset.title;
+});
